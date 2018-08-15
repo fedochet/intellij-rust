@@ -70,7 +70,7 @@ private fun expandMacroForView(macroToExpand: RsMacroCall, expandRecursively: Bo
         getMacroExpansions(macroToExpand, expandRecursively)
     )
 
-private fun<T> Project.computeWithCancelableProgress(title: String, supplier: () -> T): T {
+fun<T> Project.computeWithCancelableProgress(title: String, supplier: () -> T): T {
     val manager = ProgressManager.getInstance()
 
     return manager.runProcessWithProgressSynchronously<T, Exception>(supplier, title, true, this)

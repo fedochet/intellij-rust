@@ -672,6 +672,9 @@
 
         <projectService serviceImplementation="org.rust.lang.core.resolve.ref.RsResolveCache"/>
 
+        <projectService serviceInterface="org.rust.ide.intentions.CustomDeriveExpander"
+                        serviceImplementation="org.rust.ide.intentions.CustomDeriveExpanderImpl"/>
+
     </extensions>
 
     <application-components>
